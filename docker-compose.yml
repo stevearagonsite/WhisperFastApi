@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  growyd-server-api-test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        PORT: 8080
+    env_file: .env
+  growyd-server-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        PORT: 8080
+    env_file: .env
